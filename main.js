@@ -21,13 +21,12 @@ document.getElementById("q0").classList.add("status-good");
 
 
 
-
 // 1. Declare a variable whose value is an empty array.
 //    Use any method you choose to add at least 4 items to it.
 
-var array = ["blue"];
+var array = [];
 array.unshift("red", "green");
-array.push("yellow");
+array.push("blue","yellow");
 
 document.getElementById("q1").innerHTML = array;
 
@@ -48,15 +47,14 @@ document.getElementById("q3").innerHTML = sliced;
 
 // 4. Add two new items after the second item.
 
-var sliced = array.push("orange", "pink");
+sliced.push("orange", "pink");
 
 document.getElementById("q4").innerHTML = sliced;
 
 
 
-
 // 5. Log to the console: 'The current length of the array is....' using the .length method
-document.getElementById("q5").innerHTML = array.length;
+document.getElementById("q5").innerHTML = "<p>" + "The current length of the array is " + array.length + "</p>";
 
 
 
@@ -81,9 +79,9 @@ document.getElementById("q7").innerHTML = combine;
 
 // 8. Remove the first item.
 
-// var combine = combine.shift();
+things.shift();
 
-// document.getElementById("q8").innerHTML = combine;
+document.getElementById("q8a").innerHTML = things;
 
 
 
@@ -126,10 +124,11 @@ document.getElementById("q11").innerHTML = array4;
 
 // 12. Remove "Sparky" and "White" from the above array of arrays.
 
-array4.slice([0,3],[2,0]);
+
+array4[0].splice(3,1);
+array4[2].splice(0,1);
 
 document.getElementById("q12").innerHTML = array4;
-
 
 
 
@@ -139,30 +138,33 @@ var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', '
 
 // 13. Declare an array called lastItem using .pop() on the campingItems array.
 
-
-
-
+var lastItem = [campingItems.pop()];
+document.getElementById("q13").innerHTML = lastItem;
 
 
 // 14. Add two new items to lastItem, one at the beginning and one at the end.
 
+lastItem.push("compass");
+lastItem.unshift("grill");
 
-
+document.getElementById("q14").innerHTML = lastItem;
 
 
 
 // 15. Add s'mores to the lastItem array.
 
+lastItem.push("s'mores");
 
-
+document.getElementById("q15").innerHTML = lastItem;
 
 
 
 // 16. Create a new Array called reversedItems.
 //    The items should be the same as lastItem, only in reverse order.
 
+var reversedItems = lastItem.reverse();
 
-
+document.getElementById("q16").innerHTML = reversedItems;
 
 
 // 17. Using the Arrays below, create a single Array
@@ -170,21 +172,20 @@ var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', '
 var firstArray = [12, 5, 9, 27];
 var secondArray = ['fish', 'dog'];
 
+var numberPets = firstArray.concat(secondArray);
 
-
+document.getElementById("q17").innerHTML =  numberPets;
 
 
 // 18: Try to arrange the following items from smallest to largest:
 var sortingNumbers = [2, 5, 98, 55, 77, 300];
 // If it doesn't sort as expected, explain why.
 
+sortingNumbers.sort(function(a,b){
+	return a-b
+});
 
-
-
-
-
-
-
+document.getElementById("q18").innerHTML =  sortingNumbers;
 
 
 
