@@ -25,37 +25,38 @@ document.getElementById("q0").classList.add("status-good");
 // 1. Declare a variable whose value is an empty array.
 //    Use any method you choose to add at least 4 items to it.
 
+var array = ["blue"];
+array.unshift("red", "green");
+array.push("yellow");
 
-
-
+document.getElementById("q1").innerHTML = array;
 
 
 // 2. Add an additional item to the beginning of your array.
 
-
-
+array.unshift("black");
+document.getElementById("q2").innerHTML = array;
 
 
 
 // 3. Remove the second and third items in your array.
 
+var sliced = array.slice(1,3);
 
-
-
+document.getElementById("q3").innerHTML = sliced;
 
 
 // 4. Add two new items after the second item.
 
+var sliced = array.push("orange", "pink");
 
+document.getElementById("q4").innerHTML = sliced;
 
 
 
 
 // 5. Log to the console: 'The current length of the array is....' using the .length method
-
-
-
-
+document.getElementById("q5").innerHTML = array.length;
 
 
 
@@ -64,33 +65,33 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 // 6. Change 'mouse' to 'keyboard'
 
+things[2] = "keyboard";
 
-
+document.getElementById("q6").innerHTML = things;
 
 
 
 // 7. Combine all of the elements of the array into a string.
 //    (Hint: check out the 'join' method.)
 
+var combine = things.join(" and ");
 
-
-
+document.getElementById("q7").innerHTML = combine;
 
 
 // 8. Remove the first item.
 
+// var combine = combine.shift();
 
-
-
-
+// document.getElementById("q8").innerHTML = combine;
 
 
 
 // 9. Remove all items from the things array.
 
+var things = [];
 
-
-
+document.getElementById("q9").innerHTML = things;
 
 
 
@@ -99,9 +100,9 @@ var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
 
 // 10. Arrange the items alphabetically. Store this Array as orderedPeople
 
+var orderedPeople = people.sort();
 
-
-
+document.getElementById("q10").innerHTML = orderedPeople;
 
 
 
@@ -118,15 +119,16 @@ var array4 = [
               ]
 
 
+var array4 = [array1, array2, array3];
 
-
-
+document.getElementById("q11").innerHTML = array4;
 
 
 // 12. Remove "Sparky" and "White" from the above array of arrays.
 
+array4.slice([0,3],[2,0]);
 
-
+document.getElementById("q12").innerHTML = array4;
 
 
 
