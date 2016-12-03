@@ -1,6 +1,6 @@
 /*
 =======================================================
-** Week 2 - Project 1 ** Arrays
+** Week 2 - Project 1 ** Arrays and methods of arrays
 
 Below are a number of problems for you to solve
 using JS. The JS code can be written below each
